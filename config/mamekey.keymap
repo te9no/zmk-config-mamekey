@@ -61,12 +61,59 @@
             key-positions = <31 32>;
         };
         
-        lang_change {
-            timeout-ms = <400>;
-            key-positions = <27 27>;  // 同じキーを2回
-            bindings = <&kp LC(SPC)>;
+//        lang_change {
+//            timeout-ms = <400>;
+//            key-positions = <27 27>;  // 同じキーを2回
+//            bindings = <&kp LC(SPC)>;
+//        };
 
     };
+    
+
+    behaviors {
+        layer_led_1: layer_led_1 {
+            compatible = "zmk,behavior-layer-state";
+            label = "LAYER_LED_1";
+            layer = <1>;
+            bindings = <&rgb_ug RGB_HSV 0 0 100>;  // 白
+        };
+
+        layer_led_2: layer_led_2 {
+            compatible = "zmk,behavior-layer-state";
+            label = "LAYER_LED_2";
+            layer = <2>;
+            bindings = <&rgb_ug RGB_HSV 85 255 255>;  // 緑
+        };
+
+        layer_led_3: layer_led_3 {
+            compatible = "zmk,behavior-layer-state";
+            label = "LAYER_LED_3";
+            layer = <3>;
+            bindings = <&rgb_ug RGB_HSV 43 255 255>;  // 黄色
+        };
+        
+        layer_led_4: layer_led_4 {
+            compatible = "zmk,behavior-layer-state";
+            label = "LAYER_LED_4";
+            layer = <4>;
+            bindings = <&rgb_ug RGB_HSV 0 255 255>;  // 赤
+        };
+        
+        layer_led_5: layer_led_5 {
+            compatible = "zmk,behavior-layer-state";
+            label = "LAYER_LED_5";
+            layer = <5>;
+            bindings = <&rgb_ug RGB_HSV 213 255 255>;  // 紫
+        };        
+        
+        layer_led_6: layer_led_6 {
+            compatible = "zmk,behavior-layer-state";
+            label = "LAYER_LED_6";
+            layer = <6>;
+            bindings = <&rgb_ug RGB_HSV 160 255 255>;  // 青
+        };        
+    };
+    
     
 
     keymap {
@@ -78,6 +125,13 @@
 &mt LEFT_SHIFT A  &kp S         &kp D         &kp F         &kp G        &tog 1                    &kp H               &kp J          &kp K        &kp L       &mt RIGHT_SHIFT SQT
 &kp Z             &kp X         &kp C         &kp V         &kp B        &td LA(GRAVE) 3 LC(SPC)   &kp N               &kp M          &kp COMMA    &kp DOT     &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp DEL       &lt 1 SPACE  &trans                    &lt 2 ENTER         &kp BACKSPACE  &tog 4       &tog 6      &rgb_ug RGB_TOG
+
+&layer_led_1
+&layer_led_2
+&layer_led_3
+&layer_led_4
+&layer_led_5
+&layer_led_6
             >;   
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -89,6 +143,13 @@
 &kp LG(LS(LEFT_ARROW))   &kp LG(LS(RIGHT_ARROW))  &kp LA(LEFT_ARROW)      &kp LA(RIGHT_ARROW)      &kp LG(TAB)  &trans  &kp ASTERISK     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS
 &trans                   &trans                   &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &kp C_MUTE   &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL
 &trans                   &trans                   &trans                  &trans                   &trans       &trans  &trans           &trans           &trans           &kp PERIOD       &trans
+
+&layer_led_1
+&layer_led_2
+&layer_led_3
+&layer_led_4
+&layer_led_5
+&layer_led_6
             >;
         };
 
@@ -98,6 +159,13 @@
 &kp AMPERSAND  &kp SINGLE_QUOTE   &kp DOLLAR       &trans        &kp BACKSLASH   &trans   &kp HASH   &trans           &kp PERCENT   &kp LEFT_BRACKET      &kp LEFT_BRACKET
 &trans         &trans             &trans           &trans        &kp PIPE        &trans   &kp TILDE  &trans           &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE 
 &kp F6         &kp F7             &kp F8           &trans        &trans          &trans   &trans     &trans           &trans        &trans                &trans 
+
+&layer_led_1
+&layer_led_2
+&layer_led_3
+&layer_led_4
+&layer_led_5
+&layer_led_6
             >;
         };
 
@@ -107,6 +175,13 @@
 &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END 
 &trans    &trans          &trans          &trans           &trans   &trans  &trans    &trans          &trans          &trans           &trans
 &trans    &trans          &trans          &trans           &trans   &trans  &trans    &trans          &trans          &trans           &trans
+
+&layer_led_1
+&layer_led_2
+&layer_led_3
+&layer_led_4
+&layer_led_5
+&layer_led_6
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -118,6 +193,13 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+
+&layer_led_1
+&layer_led_2
+&layer_led_3
+&layer_led_4
+&layer_led_5
+&layer_led_6
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -129,6 +211,13 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+
+&layer_led_1
+&layer_led_2
+&layer_led_3
+&layer_led_4
+&layer_led_5
+&layer_led_6
             >;
         };
 
@@ -138,6 +227,13 @@
 &trans  &trans        &trans        &trans        &trans        &trans       &trans        &trans        &trans        &trans           &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &bootloader  &trans        &trans        &trans        &rgb_ug RGB_BRI  &rgb_ug RGB_BRD
 &trans  &trans        &trans        &trans        &trans        &trans       &trans        &trans        &trans        &trans           &trans
+
+&layer_led_1
+&layer_led_2
+&layer_led_3
+&layer_led_4
+&layer_led_5
+&layer_led_6
             >;
         };        
         

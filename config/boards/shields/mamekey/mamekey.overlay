@@ -1,3 +1,5 @@
+#include "mamekey.dtsi"
+
 / {
     leds {
         compatible = "gpio-leds";
