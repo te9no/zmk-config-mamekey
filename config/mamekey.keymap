@@ -27,7 +27,7 @@
         };
         
         single_quotation {
-            bindings = <&kp SINGLE_QUOTES>;
+            bindings = <&kp SINGLE_QUOTE>;
             key-positions = <6 7>;
         }; 
                        
