@@ -21,4 +21,3 @@
 include:
   - board: seeeduino_xiao_ble
     shield: mamekey
-   extra_shields: studio-rpc-usb-uart
