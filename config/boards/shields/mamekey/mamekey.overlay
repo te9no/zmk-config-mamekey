@@ -9,6 +9,5 @@
             label = "BT LED";
         };
     };
-    
-    &xiao_serial { status = "disabled"; };
+
 };
