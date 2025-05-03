@@ -75,42 +75,42 @@
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_1";
             layer = <1>;
-            bindings = <&rgb_ug 0 0 100>;  // 白
+            bindings = <&rgb_ug RGB_COLOR_HSB(0 0 100)>;  // 白
         };
 
         layer_led_2: layer_led_2 {
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_2";
             layer = <2>;
-            bindings = <&rgb_ug 85 255 255>;  // 緑
+            bindings = <&rgb_ug RGB_COLOR_HSB(85 255 255)>;  // 緑
         };
 
         layer_led_3: layer_led_3 {
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_3";
             layer = <3>;
-            bindings = <&rgb_ug 43 255 255>;  // 黄色
+            bindings = <&rgb_ug RGB_COLOR_HSB(43 255 255)>;  // 黄色
         };
         
         layer_led_4: layer_led_4 {
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_4";
             layer = <4>;
-            bindings = <&rgb_ug 0 255 255>;  // 赤
+            bindings = <&rgb_ug RGB_COLOR_HSB(0 255 255)>;  // 赤
         };
         
         layer_led_5: layer_led_5 {
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_5";
             layer = <5>;
-            bindings = <&rgb_ug 213 255 255>;  // 紫
+            bindings = <&rgb_ug RGB_COLOR_HSB(213 255 255)>;  // 紫
         };        
         
         layer_led_6: layer_led_6 {
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_6";
             layer = <6>;
-            bindings = <&rgb_ug 160 255 255>;  // 青
+            bindings = <&rgb_ug RGB_COLOR_HSB(160 255 255)>;  // 青
         }; 
 
         td_mt: tap_dance_mod_tap {
