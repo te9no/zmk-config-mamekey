@@ -74,6 +74,7 @@
         layer_led_1: layer_led_1 {
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_1";
+            #binding-cells = <1>;
             layer = <1>;
             bindings = <&rgb_ug RGB_COLOR_HSB(0,0,100)>;  // 白
         };
@@ -81,6 +82,7 @@
         layer_led_2: layer_led_2 {
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_2";
+            #binding-cells = <2>;
             layer = <2>;
             bindings = <&rgb_ug RGB_COLOR_HSB(85,255,255)>;  // 緑
         };
@@ -88,6 +90,7 @@
         layer_led_3: layer_led_3 {
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_3";
+            #binding-cells = <3>;
             layer = <3>;
             bindings = <&rgb_ug RGB_COLOR_HSB(43,255,255)>;  // 黄色
         };
@@ -95,6 +98,7 @@
         layer_led_4: layer_led_4 {
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_4";
+            #binding-cells = <4>;
             layer = <4>;
             bindings = <&rgb_ug RGB_COLOR_HSB(0,255,255)>;  // 赤
         };
@@ -102,6 +106,7 @@
         layer_led_5: layer_led_5 {
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_5";
+            #binding-cells = <5>;
             layer = <5>;
             bindings = <&rgb_ug RGB_COLOR_HSB(213,255,255)>;  // 紫
         };        
@@ -109,6 +114,7 @@
         layer_led_6: layer_led_6 {
             compatible = "zmk,behavior-layer-state";
             label = "LAYER_LED_6";
+            #binding-cells = <6>;
             layer = <6>;
             bindings = <&rgb_ug RGB_COLOR_HSB(160,255,255)>;  // 青
         }; 
