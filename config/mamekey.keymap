@@ -111,7 +111,14 @@
             label = "LAYER_LED_6";
             layer = <6>;
             bindings = <&rgb_ug 160 255 255>;  // 青
-        };        
+        }; 
+
+        td_mt: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt 3 LA(GRAVE)>, <&kp LC(SPC)>;
+        };               
     };
     
     
@@ -123,7 +130,7 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R         &kp T                                  &kp Y               &kp U          &kp I        &kp O       &kp P
 &mt LEFT_SHIFT A  &kp S         &kp D         &kp F         &kp G        &tog 1                    &kp H               &kp J          &kp K        &kp L       &mt RIGHT_SHIFT SQT
-&kp Z             &kp X         &kp C         &kp V         &kp B        &td LA(GRAVE) 3 LC(SPC)   &kp N               &kp M          &kp COMMA    &kp DOT     &kp SLASH
+&kp Z             &kp X         &kp C         &kp V         &kp B        &td_mt                    &kp N               &kp M          &kp COMMA    &kp DOT     &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp DEL       &lt 1 SPACE  &trans                    &lt 2 ENTER         &kp BACKSPACE  &tog 4       &tog 6      &rgb_ug RGB_TOG
 
 &layer_led_1
