@@ -50,7 +50,7 @@
      } 
   },
   
-  "sensors": [
+  "sensors":[
     {
       "ref": "encoder",
       "name": "encoder",
