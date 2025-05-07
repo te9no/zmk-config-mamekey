@@ -38,8 +38,6 @@
         	sensors = <&encoder>;
         	triggers-per-rotation = <10>;
     };
-    
-    &xiao_serial { status = "disabled"; };
 
     default_transform: matrix_transform {
         compatible = "zmk,matrix-transform";
