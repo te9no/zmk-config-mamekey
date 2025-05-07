@@ -6,6 +6,3 @@ url: https://github.com/mameeeeekko/zmk-config-mamekey.git
 requires: [seeeduino_xiao_ble]
 features:
   - keys
-  - underglow
-  - encorder
-  - studio
