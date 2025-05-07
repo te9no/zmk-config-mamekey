@@ -56,7 +56,7 @@
       "name": "encoder",
       "identifier": "encoder",
       "compatible": "alps,ec11",
-      "enabled": false
+      "enabled": "okay"
     },
   ]
 }
