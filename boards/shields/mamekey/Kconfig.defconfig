@@ -1,7 +1,4 @@
 if SHIELD_MAMEKEY
-
-# Name must be less than 16 characters long!
-config ZMK_KEYBOARD_NAME
+    config ZMK_KEYBOARD_NAME
         default "mamekey"
-
-endif
+endif 
