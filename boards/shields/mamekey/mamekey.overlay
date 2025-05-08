@@ -26,9 +26,8 @@
           ; // addressable space is 8x8, (minus paired values)
     };
 
-&xiao_serial { status = "disabled"; };
 
-        encoder: encoder {
+    encoder: encoder {
         compatible = "alps,ec11";
         a-gpios = <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -36,7 +35,7 @@
         status = "okay";
     };
     
-    	sensors: sensors {
+    sensors: sensors {
         	compatible = "zmk,keymap-sensors";
         	sensors = <&encoder>;
         	triggers-per-rotation = <10>;
@@ -111,4 +110,5 @@
     };
 };
 
+&xiao_serial { status = "disabled"; };
 &xiao_i2c { status = "disabled"; };
